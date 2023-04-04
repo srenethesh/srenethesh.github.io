@@ -1,127 +1,241 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<style>
+	<meta charset="UTF-8">
+	<title>Portfolio Website</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
 body {
-  background-image: url("https://th.bing.com/th/id/R.8aca2d34c38b9680fec8f4d068984ce0?rik=FdQ%2fF6qgDPYufg&riu=http%3a%2f%2fwww.eurobankholdings.gr%2f-%2fmedia%2fholding%2ffooter%2fproduct%2fgdpr-product-810-400.jpg&ehk=RMtstvkKqEujKunXiMHhZUT%2bId2mKRlVWDmnBigRvDs%3d&risl=&pid=ImgRaw&r=0");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:cover;
-
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(197, 47, 147);
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
 }
 
-
-h1 {
-  color: white;
-  font-family: TIMES NEWROMAN;
-  text-align: center;
-  font-size: 60px;
-}
-
-h2 {
-  color: green;
-  text-align: center;
-  font-size: 40px
-}
-
-p {
-  color: light blue;
-  font-family: verdana;
-  text-align: left;
-  font-size: 20px;
-}
-
-h3 {
-   color: white;
-   font-family: verdana;
-   text-align:left;
-   font-size:20px;
+h1, h2, h3 {
+	font-weight: 700;
+	margin: 0;
 }
 
 a {
-  color: hotpink;
+	color: #333;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* Header Styles */
+header {
+	background-color: #208d73;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
 }
 
-h4 {
-   color: white;
-   text-align:right;
-   font-size:20px;
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
-</style>
+
+nav ul li {
+	display:inline-block;
+	margin-left: 20px;
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+
+nav a:hover{
+	color: #c41616;
+}
+
+/* Main Styles */
+main {
+	margin-top: 20px;
+}
+
+section {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 80px 20px;
+}
+
+section h2 {
+	font-size: 2.5rem;
+	margin-bottom: 40px;
+}
+
+section p {
+	font-size: 1.125rem;
+	line-height: 1.8;
+}
+
+/* Home Section Styles */
+#home {
+	background-image: url('bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #331e5f;
+	height: 100vh;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+}
+
+#home h1 {
+	font-size: 4rem;
+	margin-bottom: 20px;
+	text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+#home h2 {
+
+	font-style: italic;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home p {
+	font-size: 1.5rem;
+	text-align: center;
+	text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+	background-color: #8b80a1;
+}
+
+#portfolio ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#portfolio li {
+	width: calc(33.33% - 20px);
+	margin-bottom: 40px;
+}
+
+#portfolio li a {
+	display: block;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(239, 221, 221, 0.2);
+}
+
+#portfolio li a:hover img {
+	transform: scale(1.1);
+}
+
+#portfolio li img {
+	width: 100%;
+	height: auto;
+	transition: all 0.2s ease-in-out;
+}
+
+#portfolio li h3 {
+	font-size: 1.5rem;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+#portfolio li p {
+	font-size: 1rem;
+}
+
+/* Contact Section Styles */
+#contact {
+	background-color: #f9f9f9;
+}
+
+form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	font-size: 1.125rem;
+	margin-bottom: 10px;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	border: 10px;
+}
+
+    </style>
 </head>
 <body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section id="home">
+            <img src="photo.jpeg" alt="Your Name" style="border-radius: 50%; width: 200px; height: 200px;;">
+			<br>
+			<br>
 
-<h2>CRYPTOGRAPHY<h2>
-<h3>WHAT IS CRYPTOGRAPHY?</h3>
-<p>
-Cryptography is the practice and study of techniques for securing communication and data in the presence of adversaries.
-Encryption is essentially important because it secures data and information from unauthorized access and thus maintains
- the confidentiality. Here’s a blog post to help you understand "what is cryptography" and
- how can it be used to protect corporate secrets, secure classified information, and personal information to guard against things like identity theft.
-<br>
-<br>
-<br>
-</p>
-<h3>WHY CRYPTOGRAPHY IS IMPORTANT?</h3>
-<p>
-Cryptography is the study of techniques used for ensuring a secured communication. With the help of cryptography, you can construct protocols
- which will prevent the third parties from reading your private messages. Cryptography is nowadays used in a number of applications
- such as military communications, e-commerce, computer passwords, digital currencies, and so on. 
-<br>
-Cryptography is also used for spying and hence, it is considered as a weapon in a number of countries.
- In some of the countries, cryptography is used by the investigators to get access to highly confidential 
-and private documents which are relevant to an investigation.
-<br>
-<br>
-<br>
-</p>
-<h3>FEATURES OF CRYPTOGRAPHY?</h3>
-
-<h3>1.Confidentiality:</h3>
-<p>Information can only be accessed by the person for whom it is intended and no other person except him can access it.</p>
-<h3>2.Integrity:</h3>
-<p>Information cannot be modified in storage or transition between sender and intended receiver without any addition to information being detected.</p>
-<h3>3.Non-repudiation:</h3>
-<p>The creator/sender of information cannot deny his or her intention to send information at later stage.</p>
-<h3>4.Authentication:</h3>
-<p>The identities of sender and receiver are confirmed. As well as destination/origin of information is confirmed.</p>
-<br>
-<br>
-<br>
-<h3>TYPES OF CRYPTOGRAPHY:</h3>
-<p>In general there are three types Of cryptography ,let us what are they:</p>
-<h3>1.Symmetric Key Cryptography:</h3>
-<p>It is an encryption system where the sender and receiver of message use a single common key to encrypt and decrypt messages. 
-Symmetric Key Systems are faster and simpler but the problem is that sender and receiver have to somehow exchange key in a secure manner. 
-The most popular symmetric key cryptography system is Data Encryption System(DES).</p>
-<h3>2.Hash Functions:</h3>
-<p>There is no usage of any key in this algorithm.
- A hash value with fixed length is calculated as per the plain text which makes it impossible for contents of plain text to be recovered.
- Many operating systems use hash functions to encrypt passwords.</p>
-<h3>3.Asymmetric Key Cryptography:</h3>
-<p>Under this system a pair of keys is used to encrypt and decrypt information.
- A public key is used for encryption and a private key is used for decryption. 
-Public key and Private Key are different.
- Even if the public key is known by everyone the intended receiver can only decode it because he alone knows the private key</p>
-<br>
-<br>
-<br>
-<h3>WEBSITES TO LEARN CRYPTOGRAPHY:</h3>
-<p>
-<a href ="https://cryptohack.org/">cyptohacks.com</a>
-<br>
-<a href ="https://www.coursera.org/learn/crypto">coursera.com</a>
-<br>
-<a href ="https://www.edx.org/learn/cryptography">edx.com</a>
-<br>
-<a href ="https://careerkarma.com/blog/cryptography/">careerkarma.com</a>
-<br>
-<a href ="https://tryhackme.com/">tryhackme.com</a>
-<br>
-<a href ="https://www.hackthebox.com/">hackthebox.com</a>
-</p>
-<br>
-<br>
-<br>
+            <h2>I'm SRENETHESH</h2>
+			<p>UX/UI Deginer|Cryptographer|Hardware engineer|Web developer</p>
+		</section>
+		
+		<section id="portfolio">;
+			<h2>Portfolio</h2>
+			<ul>
+				<li>
+					<a href="#"><img src="project1.jpg" alt="Project 1"></a>
+					<h3>Project 1</h3>
+					<p>Description of project 1.</p>
+				</li>
+				<li>
+					<a href="#"><img src="project2.jpg" alt="Project 2"></a>
+					<h3>Project 2</h3>  
+					<p>Description of project 2.</p>
+				</li>
+			</ul>
+		</section>
+		
+		<section id="contact">
+			<h2>Contact Me</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+				<input type="submit" value="Send">
+			</form>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 Srenethesh. All rights reserved.</p>
+	</footer>
+	
+	<script src="script.js"></script>
 </body>
 </html>
