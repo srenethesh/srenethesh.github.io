@@ -8,7 +8,10 @@
         /* Global Styles */
 body {
 	font-family: 'Open Sans', sans-serif;
-	background-color: rgb(197, 47, 147);
+	background-image: url("background img.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	backface-visibility:inherit;
 	font-size: 16px;
 	line-height: 1.5;
 	margin: 0;
@@ -31,13 +34,14 @@ ul {
 }
 /* Header Styles */
 header {
-	background-color: #208d73;
+	background-color: #84601d;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
+	gap: 1px;
 }
 
 nav {
@@ -90,11 +94,12 @@ section p {
 	background-size: cover;
 	background-position: center;
 	color: #331e5f;
-	height: 100vh;
+	height: 50vh;
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
 	align-items:center;
+
 }
 
 #home h1 {
@@ -111,7 +116,7 @@ section p {
 #home p {
 	font-size: 1.5rem;
 	text-align: center;
-	text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 /* Portfolio Section Styles */
@@ -159,9 +164,8 @@ section p {
 
 /* Contact Section Styles */
 #contact {
-	background-color: #f9f9f9;
+	color: rgb(84, 64, 38);
 }
-
 form {
 	max-width: 600px;
 	margin: 0 auto;
@@ -178,14 +182,24 @@ input, textarea {
 	padding: 10px;
 	border: 10px;
 }
+#about h3 {
+	text-align: center;
+	font-size: 30px;
+}
+#about p {
+	text-align: center;
+	font-size: 30px;
+}
 
     </style>
 </head>
 <body>
+
 	<header>
 		<nav>
 			<ul>
 				<li><a href="#home">Home</a></li>
+				<li><a href="about">About</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -193,16 +207,30 @@ input, textarea {
 	</header>
 	
 	<main>
+		
 		<section id="home">
             <img src="photo.jpeg" alt="Your Name" style="border-radius: 50%; width: 200px; height: 200px;;">
 			<br>
 			<br>
 
             <h2>I'm SRENETHESH</h2>
-			<p>UX/UI Designer|Cryptographer|Hardware engineer|Web developer</p>
+			<p>UX/UI Deginer|Web developer</p>
+
+
+		</section>
+		<section id="about">
+	    
+			<h2>About</h2>
+			<h3><br><b>HIGHER STUDIES:</b> </h3>
+			<P>Velammal Vidyalaya Viraganoor</P>
+			<br>
+			<br>
+			<h3><br><b>DEGREE:</b> </h3>
+			<P>Computer and Communication Engineering</P>
+
 		</section>
 		
-		<section id="portfolio">;
+		<section id="portfolio">
 			<h2>Portfolio</h2>
 			<ul>
 				<li>
