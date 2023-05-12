@@ -7,8 +7,10 @@
     <style>
         /* Global Styles */
 body {
+
 	font-family: 'Open Sans', sans-serif;
-	background-image: url("background img.jpg");
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 	background-size: cover;
 	background-attachment: fixed;
 	backface-visibility:inherit;
@@ -34,7 +36,8 @@ ul {
 }
 /* Header Styles */
 header {
-	background-color: #84601d;
+	background: rgb(116,114,158);
+	background: linear-gradient(90deg, rgba(116,114,158,1) 0%, rgba(68,45,79,1) 100%, rgba(0,212,255,1) 100%);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	position: fixed;
 	top: 0;
@@ -90,15 +93,18 @@ section p {
 
 /* Home Section Styles */
 #home {
+	
 	background-image: url('bg.jpg');
 	background-size: cover;
-	background-position: center;
+	/* position: fixed; */
+	background-position: top left;
 	color: #331e5f;
 	height: 50vh;
 	display: flex;
 	flex-direction:column;
-	justify-content: center;
-	align-items:center;
+	justify-content: top left;
+	overflow: none;
+	/* align-items:top left; */
 
 }
 
@@ -122,6 +128,7 @@ section p {
 /* Portfolio Section Styles */
 #portfolio {
 	background-color: #8b80a1;
+	background-position: top right;
 }
 
 #portfolio ul {
@@ -191,6 +198,10 @@ input, textarea {
 	font-size: 30px;
 }
 
+.main {
+	display: flex;
+}
+
     </style>
 </head>
 <body>
@@ -199,25 +210,27 @@ input, textarea {
 		<nav>
 			<ul>
 				<li><a href="#home">Home</a></li>
-				
+				<li><a href="about">About</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 	
-	<main>
-		
+	
+	<main class="main">
+
 		<section id="home">
             <img src="photo.jpeg" alt="Your Name" style="border-radius: 50%; width: 200px; height: 200px;;">
 			<br>
 			<br>
 
             <h2>I'm SRENETHESH</h2>
-			<p>UX/UI Deginer|Web developer</p>
+			<p>Computer Engineer|Front-end developer|Digital Artist</p>
 
 
 		</section>
+		<div>
 		<section id="about">
 	    
 			<h2>About</h2>
@@ -258,6 +271,7 @@ input, textarea {
 				<input type="submit" value="Send">
 			</form>
 		</section>
+		</div>
 	</main>
 	
 	<footer>
