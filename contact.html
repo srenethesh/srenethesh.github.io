@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contact {
+	color: rgb(84, 64, 38);
+}
+form {
+	max-width: 600px;
+	margin: 0 auto;
+
+}
+
+label {
+	display: block;
+	font-size: 1.125rem;
+	margin-bottom: 10px;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	border: 10px;
+}
+h2 {
+	font-weight: 700;
+	margin: 0;
+    text-align: center;
+    font-size:xx-large;
+}
+body{
+    font-family:Comic Sans MS;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+    </style>
+</head>
+<body>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+</body>
+</html> 
